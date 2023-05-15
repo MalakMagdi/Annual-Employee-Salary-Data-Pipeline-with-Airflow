@@ -16,9 +16,9 @@ def join_and_detect_new_or_changed_rows():
     os.environ['AWS_ACCESS_KEY_ID']=AWS_ACCESS_KEY
     os.environ['AWS_SECRET_ACCESS_KEY']=AWS_SECRET_KEY
 
-    emp_detail = pd.read_csv('s3://staging.emp.data/Malak_hr.details.csv')
+    emp_detail = pd.read_csv('s3://staging.emp.data/<your_file>.csv')
     emp_detail.drop(columns='Unnamed: 0', inplace=True)
-    emp_sal = pd.read_csv('s3://staging.emp.data/Malak_emp.details.csv')
+    emp_sal = pd.read_csv('s3://staging.emp.data/<your_file>.csv')
     emp_sal.drop(columns='Unnamed: 0', inplace=True)
     print("Succesfully read data from AWS S3")
     
@@ -31,9 +31,9 @@ def join_and_detect_new_or_changed_rows():
     ################################### Connect to DWH ###################################
     # Use your Snowfake user credentials to connect
     conn = connect(
-            user='malakmagdi96',
-            password='H@ppybirthday1996',
-            account='sf99927.eu-west-2.aws'
+            user='write your username',
+            password='write your Password here',
+            account='write your account'
         )
     print("Connected to Snowflake DWH succesfully")
     
