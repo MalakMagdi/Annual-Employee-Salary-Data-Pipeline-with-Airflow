@@ -2,6 +2,8 @@
 
 It is an Apache Airflow project that automates the extraction, transformation, and loading (ETL) process for synchronizing employee salary data. The project extracts data from a PostgreSQL source system hosted on AWS, stages it in Amazon S3, performs transformations using Pandas, and updates and inserts the data into the Snowflake data warehouse.
 
+![Project](https://github.com/MalakMagdi/Annual-Employee-Salary-Data-Pipeline-with-Airflow/assets/110945022/d89e3184-4c22-40dd-9116-cafc7f7f9a08)
+
 ## Project Overview
 
 The primary goal of The project is to ensure accurate and up-to-date employee salary information in the data warehouse. The project performs the following steps:
