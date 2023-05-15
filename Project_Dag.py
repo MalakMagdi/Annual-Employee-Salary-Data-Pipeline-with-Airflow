@@ -24,7 +24,7 @@ with DAG("Project", start_date=datetime(2023, 5, 14), schedule_interval='@yearly
         aws_conn_id="AWS_GET_SOURCE",
         query="select * from finance.emp_sal",
         s3_bucket="staging.emp.data",
-        s3_key="Malak_emp.details.csv",
+        s3_key="<your_file>.csv",
         replace=True,
     )
 
@@ -34,7 +34,7 @@ with DAG("Project", start_date=datetime(2023, 5, 14), schedule_interval='@yearly
         aws_conn_id="AWS_GET_SOURCE",
         query="select * from hr.emp_details",
         s3_bucket="staging.emp.data",
-        s3_key="Malak_hr.details.csv",
+        s3_key="<your_file>.csv",
         replace=True,
     )
 
